@@ -13,15 +13,16 @@
           var decoded = l.search.slice(4).split('&').map(function(s) {
             return s.replace(/~and~/g, '&')
           });
+          var base = l.pathname.endsWith('/') ? l.pathname : l.pathname + '/';
           window.history.replaceState(
             null, null,
-            '/' + decoded[0] + (decoded[1] ? '?' + decoded[1] : '') + l.hash
+            base + decoded[0] + (decoded[1] ? '?' + decoded[1] : '') + l.hash
           );
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="/assets/index-DJqdrWww.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-gM9bo6C_.css">
+    <script type="module" crossorigin src="/assets/index-wixNuWgp.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DwpSNtGl.css">
   </head>
   <body>
     <div id="root"></div>
