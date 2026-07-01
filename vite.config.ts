@@ -3,8 +3,12 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig(({ mode }) => ({
+  base: '/',
   plugins: [react(), tailwindcss()],
-  base: mode === 'github' ? '/genroplumbing-app/' : '/',
+  build: {
+      outDir: 'dist',
+      sourcemap: false,
+  },
   resolve: {
     alias: {
       '@': '/src',
